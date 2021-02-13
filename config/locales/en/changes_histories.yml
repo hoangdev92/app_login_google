@@ -1,0 +1,6 @@
+en:
+  changes_histories:
+    create: Created
+    update: Updated
+    destroy: Destroyed
+    restore: Restored

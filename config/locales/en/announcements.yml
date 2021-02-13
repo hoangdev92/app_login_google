@@ -1,0 +1,28 @@
+en:
+  announcements:
+    requested_successfully: Requested successfully!
+    signed_up_successfully: Signed up successfully!
+    signed_in_successfully: Sign in successfully!
+    signed_out_successfully: Sign out successfully!
+    # Users
+    created_user_successfully: Created user successfully!
+    # Entities
+    created_entity_successfully: Created legal entity successfully!
+    updated_entity_successfully: Updated legal entity successfully!
+    destroyed_entity_successfully: Destroyed legal entity successfully!
+    restored_entity_successfully: Restored legal entity successfully!
+    # Categories
+    created_category_successfully: Created category successfully!
+    updated_category_successfully: Updated category successfully!
+    destroyed_category_successfully: Destroyed category successfully!
+    restored_category_successfully: Restored category successfully!
+    # Products
+    created_product_successfully: Created product successfully!
+    updated_product_successfully: Updated product successfully!
+    destroyed_product_successfully: Destroyed product successfully!
+    restored_product_successfully: Restored product successfully!
+    # Funds
+    created_fund_successfully: Created fund successfully!
+    updated_fund_successfully: Updated fund successfully!
+    destroyed_fund_successfully: Destroyed fund successfully!
+    restored_fund_successfully: Restored fund successfully!

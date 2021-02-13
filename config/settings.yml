@@ -1,0 +1,9 @@
+shared:
+  jwt:
+    # Default values' unit is hour
+    default_duration: 24
+    access_token_duration: 4
+    refresh_token_duration: 168
+
+  names:
+    template_folder: inKi_SmartDoc_Templates

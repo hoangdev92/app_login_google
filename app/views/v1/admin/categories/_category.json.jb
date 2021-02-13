@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+{
+  id: category.id,
+  names: multiple_names_of_record(category),
+  availability: category.availability,
+  created_at: category.created_at,
+  updated_at: category.updated_at
+}

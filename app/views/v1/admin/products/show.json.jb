@@ -1,0 +1,33 @@
+# frozen_string_literal: true
+
+{
+  status: true,
+  message: I18n.t('announcements.requested_successfully'),
+  code: Rails.configuration.responses.code[:success],
+  data: {
+    id: @product.id,
+    code: @product.code,
+    names: Rails.configuration.available_languages.reduce({}) do |data, language|
+      record = @product.names.detect { |name| name.language == language } || { id: nil, content: nil }
+      data.update language => { id: record[:id], content: record[:content] }
+    end,
+    availability: @product.availability,
+    changes_histories: {
+      metadata: render('v1/shared/metadata', pagy: @histories_pagy),
+      records: @histories.map do |history|
+        {
+          kind: history.kind,
+          content: history.content,
+          fields: history.fields,
+          modifier: {
+            id: history.modifier_id,
+            email: history.modifier_email,
+            full_name: history.modifier_full_name
+          }
+        }
+      end
+    },
+    created_at: @product.created_at,
+    updated_at: @product.updated_at
+  }
+}

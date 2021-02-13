@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+{
+  status: true,
+  message: I18n.t('announcements.requested_successfully'),
+  code: Rails.configuration.responses.code[:success],
+  data: {
+    metadata: render('v1/shared/metadata', pagy: @pagy),
+    records: render(partial: 'legal_entity', collection: @entities, as: :entity)
+  }
+}

@@ -1,0 +1,3 @@
+:queues:
+  - [task, 10]
+  - [default, 5]

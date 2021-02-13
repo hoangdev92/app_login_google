@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+{
+  status: true,
+  message: I18n.t('announcements.signed_in_successfully'),
+  code: Rails.configuration.responses.code[:signed_in_successfully],
+  data: {
+    access_token: @tokens[:access_token],
+    refresh_token: @tokens[:refresh_token]
+  }
+}

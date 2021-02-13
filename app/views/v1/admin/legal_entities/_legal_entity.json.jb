@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+{
+  id: entity.id,
+  code: entity.code,
+  sync_code: entity.sync_code,
+  names: Rails.configuration.available_languages.reduce({}) do |data, language|
+    record = entity.names.detect { |name| name.language == language } || { id: nil, content: nil }
+    data.update language => { id: record[:id], content: record[:content] }
+  end,
+  availability: entity.availability,
+  created_at: entity.created_at,
+  updated_at: entity.updated_at
+}

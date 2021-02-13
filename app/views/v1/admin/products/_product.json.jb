@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+
+{
+  id: product.id,
+  code: product.code,
+  names: Rails.configuration.available_languages.reduce({}) do |data, language|
+    record = product.names.detect { |name| name.language == language } || { id: nil, content: nil }
+    data.update language => { id: record[:id], content: record[:content] }
+  end,
+  availability: product.availability,
+  created_at: product.created_at,
+  updated_at: product.updated_at
+}

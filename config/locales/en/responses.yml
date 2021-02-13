@@ -1,0 +1,18 @@
+en:
+  responses:
+    # Must redirect
+    unauthorized: Unauthorized!
+    google_authentication_failed: Google authentication failed!
+    expired_signature: Expired signature!
+    not_available_email: Not available email!
+    deactived_account: Account has been suspended!
+    not_authorized: Not authorized!
+    permission_denied: Permission denied!
+    refresh_google_credentials_failed: Refresh Google credentials failed!
+    record_not_found: Record not found!
+    # Must not redirect
+    bad_request: Bad request!
+    invalid_email_or_password: Email or Password is wrong!
+    record_invalid: Invalid record attributes!
+    already_destroyed: Record is already destroyed!
+    already_restored: Record is already restored!

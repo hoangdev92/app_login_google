@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+
+{
+  status: true,
+  message: I18n.t("announcements.#{announcement_type}_entity_successfully"),
+  code: Rails.configuration.responses.code[:"#{announcement_type}_successfully"],
+  data: render('legal_entity', entity: @entity)
+}

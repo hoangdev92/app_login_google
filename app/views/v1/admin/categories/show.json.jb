@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+{
+  status: true,
+  message: I18n.t('announcements.requested_successfully'),
+  code: Rails.configuration.responses.code[:success],
+  data: {
+    id: @category.id,
+    names: multiple_names_of_record(@category),
+    availability: @category.availability,
+    changes_histories: changes_histories_of_record(@histories, @histories_pagy),
+    created_at: @category.created_at,
+    updated_at: @category.updated_at
+  }
+}

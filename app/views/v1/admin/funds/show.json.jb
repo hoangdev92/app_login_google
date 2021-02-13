@@ -1,0 +1,33 @@
+# frozen_string_literal: true
+
+{
+  status: true,
+  message: I18n.t('announcements.requested_successfully'),
+  code: Rails.configuration.responses.code[:success],
+  data: {
+    id: @fund.id,
+    code: @fund.code,
+    owner: {
+      full_name: @fund.owner_full_name,
+      email: @fund.owner_email
+    },
+    availability: @fund.availability,
+    changes_histories: {
+      metadata: render('v1/shared/metadata', pagy: @histories_pagy),
+      records: @histories.map do |history|
+        {
+          kind: history.kind,
+          content: history.content,
+          fields: history.fields,
+          modifier: {
+            id: history.modifier_id,
+            email: history.modifier_email,
+            full_name: history.modifier_full_name
+          }
+        }
+      end
+    },
+    created_at: @fund.created_at,
+    updated_at: @fund.updated_at
+  }
+}

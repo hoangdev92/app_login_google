@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+
+{
+  items: pagy.items,
+  total_records: pagy.count,
+  current_page: pagy.page,
+  total_pages: pagy.pages
+}

@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+{
+  status: true,
+  message: I18n.t('announcements.requested_successfully'),
+  code: Rails.configuration.responses.code[:success],
+  data: {
+    email: current_user.email,
+    full_name: current_user.full_name,
+    first_name: current_user.first_name,
+    last_name: current_user.last_name,
+    avatar: current_user.avatar,
+    status: current_user.status,
+    role: current_user.role
+  }
+}

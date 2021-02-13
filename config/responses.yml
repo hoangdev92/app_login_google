@@ -1,0 +1,69 @@
+shared:
+  code:
+    # Common status
+    success: 2000
+    record_invalid: 4202
+    # For authentication
+    signed_in_successfully: 2100
+    # For CRUD
+    created_successfully: 2201
+    updated_successfully: 2202
+    destroyed_successfully: 2203
+    restored_successfully: 2204
+
+  errors:
+    # Must redirect
+    unauthorized:
+      name: unauthorized
+      status: :unauthorized
+      code: 5101
+    google_authentication_failed:
+      name: google_authentication_failed
+      status: :unauthorized
+      code: 5102
+    not_available_email:
+      name: not_available_email
+      status: :unauthorized
+      code: 5103
+    expired_signature:
+      name: expired_signature
+      status: :unauthorized
+      code: 5104
+    deactived_account:
+      name: deactived_account
+      status: :forbidden
+      code: 5105
+    not_authorized:
+      name: not_authorized
+      status: :forbidden
+      code: 5106
+    permission_denied:
+      name: permission_denied
+      status: :forbidden
+      code: 5200
+    refresh_google_credentials_failed:
+      name: refresh_google_credentials_failed
+      status: :unauthorized
+      code: 5201
+    record_not_found:
+      name: record_not_found
+      status: :not_found
+      code: 5401
+
+    # Must not redirect
+    bad_request:
+      name: bad_request
+      status: :bad_request
+      code: 4000
+    invalid_email_or_password:
+      name: invalid_email_or_password
+      status: :unprocessable_entity
+      code: 4201
+    already_destroyed:
+      name: already_destroyed
+      status: :bad_request
+      code: 4203
+    already_restored:
+      name: already_restored
+      status: :bad_request
+      code: 4204
